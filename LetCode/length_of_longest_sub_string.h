@@ -7,7 +7,7 @@
 using namespace std;
 
 /*
-获取字符串的最长子序列的长度
+获取字符串不重复字符的最长子序列的长度
 */
 
 class LongestSubStr

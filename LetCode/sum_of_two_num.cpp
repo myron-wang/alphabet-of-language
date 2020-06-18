@@ -25,7 +25,7 @@ int BinarySearch(const NumIdxVal* num_list, int pos, int num_size, int target)
                 mid_idx = left_idx + (right_idx - 1) >> 1;
                 if (num_list[mid_idx].value == target)
                 {
-                        return mid_idx;
+                        return num_list[mid_idx].index;
                 }
                 else if (num_list[mid_idx].value > target)
                 {
@@ -56,16 +56,22 @@ int* TestSumOfTwoNumber(int* numbers, int num_len, int target, int* ret_size)
                 num_list[i].index = i;
         }
         *ret_size = 2;
+        int num_mid = -1;
         qsort(num_list, num_len, sizeof(NumIdxVal), CmpTwoNum);
         for (int j = 0; j < num_len; ++j)
         {
-                int num_mid = BinarySearch(num_list, j + 1, num_len, target - num_list[j].value);
+                num_mid = BinarySearch(num_list, j + 1, num_len, target - num_list[j].value);
                 if (num_mid != -1)
                 {
                         res[0] = NumMin(num_list[j].index, num_mid);
                         res[1] = NumMax(num_list[j].index, num_mid);
                         break;
                 }
+        }
+        if (num_mid == -1)
+        {
+                res[0] = -1;
+                res[1] = -1;
         }
         free(num_list);
         return res;
@@ -74,9 +80,9 @@ int* TestSumOfTwoNumber(int* numbers, int num_len, int target, int* ret_size)
 int test(void)
 {
         printf("函数开始测试！！！\n");
-        int num_list[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int num_list[10] = { 7, 8, 1, 3, 2, 4, 6, 9, 5, 10 };
         int retsize = 0;
-        int *res_list = TestSumOfTwoNumber(num_list, 10, 11, &retsize);
+        int *res_list = TestSumOfTwoNumber(num_list, 10, 20, &retsize);
         for (int i = 0; i < retsize; ++i) {
                 printf("符合要求的数字位置%d\n", res_list[i]);
         }

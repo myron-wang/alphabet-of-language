@@ -49,7 +49,7 @@ public:
                 }
         }
 
-        int GetMedianOfTwoArray(const vector<int>& arr_a, const vector<int>& arr_b)
+        double GetMedianOfTwoArray(const vector<int>& arr_a, const vector<int>& arr_b)
         {
                 int len_a = arr_a.size();
                 int len_b = arr_b.size();
@@ -59,7 +59,7 @@ public:
                 }
                 else {
                         return (GetIndexValueOfTwoArray(arr_a, arr_b, (len_a + len_b) / 2) +
-                                GetIndexValueOfTwoArray(arr_a, arr_b, (len_a + len_b + 1) / 2));
+                                GetIndexValueOfTwoArray(arr_a, arr_b, (len_a + len_b + 2) / 2)) / 2.0;
                 }
         }
 };

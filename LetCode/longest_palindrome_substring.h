@@ -8,6 +8,10 @@
 
 using namespace std;
 
+/*
+最长回文子串问题
+*/
+
 class Palindrome
 {
 public:
