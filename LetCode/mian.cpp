@@ -1,10 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "LC_57_insert_subinterval.h"
+#include "LC_128_longest_consecutive.h"
 
 using namespace std;
 
+struct test 
+{
+        int a;
+        int b[0];
+};
+
 int main(int argc, char** argv)
 {
-        test57();
+        int arr[16] = { 0 };
+        struct test *temp = (struct test*)arr;
+        temp->a = 1;
+        temp->b[0] = 2;
+        temp->b[1] = 3;
+        //temp.b = arr;
+        test128();
 }
