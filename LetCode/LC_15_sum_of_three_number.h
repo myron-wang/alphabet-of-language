@@ -29,7 +29,7 @@ public:
                 int last = -INT_MAX;
                 for (int i = 0; i < numLen - 2; ++i)
                 {
-                        if (last != numList[i])
+                        if (last != numList[i]) // ÌÞ³ýÖØ¸´Êý×Ö
                         {
                                 last = numList[i];
                                 unordered_set<int> visited;

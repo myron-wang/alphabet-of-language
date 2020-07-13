@@ -62,6 +62,35 @@ public:
                                 GetIndexValueOfTwoArray(arr_a, arr_b, (len_a + len_b + 2) / 2)) / 2.0;
                 }
         }
+        double GetMedianOfTwoArray2(const vector<int>& nums_a, const vector<int>& nums_b)
+        {
+                vector<int> tmp(nums_a.size() + nums_b.size(), 0);
+                int i = 0, j = 0, k = 0;
+                while (i < nums_a.size() && j < nums_b.size())
+                {
+                        if (nums_a[i] < nums_b[j])
+                        {
+                                tmp[k++] = nums_a[i++];
+                        } else {
+                                tmp[k++] = nums_b[j++];
+                        }
+                }
+                while (i < nums_a.size())
+                {
+                        tmp[k++] = nums_a[i++];
+                }
+                while (j < nums_b.size())
+                {
+                        tmp[k++] = nums_b[j++];
+                }
+
+                if ((nums_a.size() + nums_b.size()) % 2 == 1)
+                {
+                        return tmp[(nums_a.size() + nums_b.size() - 1) / 2];
+                } else {
+                        return (tmp[(nums_a.size() + nums_b.size() - 1) / 2] + tmp[(nums_a.size() + nums_b.size()) / 2]) / 2.0;
+                }
+        }
 };
 
 void test2(void)
@@ -76,7 +105,7 @@ void test2(void)
         }
         arr_b.push_back(1);
         MedTwoArr num;
-        int median_num = num.GetMedianOfTwoArray(arr_a, arr_b);
+        int median_num = num.GetMedianOfTwoArray2(arr_a, arr_b);
         printf("两个数组的中位数是：%d\n", median_num);
         system("pause");
 }

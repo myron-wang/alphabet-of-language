@@ -41,7 +41,7 @@ public:
                 string str = "";
                 bool isZero = true;
                 for (int l = 0; l < result.size() - 1; ++l)
-                {
+                {//ÌÞ³ýÇ°µ¼Áã
                         if (isZero && result[l] == 0)
                         {
                                 continue;

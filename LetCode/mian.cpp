@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "LC_141_circle_list.h"
+#include "LC_7_reversal.h"
 
 using namespace std;
 
@@ -18,5 +18,5 @@ int main(int argc, char** argv)
         temp->b[0] = 2;
         temp->b[1] = 3;
         //temp.b = arr;
-        test141();
+        test7();
 }

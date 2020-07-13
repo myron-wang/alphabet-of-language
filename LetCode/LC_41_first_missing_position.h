@@ -13,7 +13,7 @@ int firstMissingPosition(int* numList, int numSize)
         for (int i = 0; i < numSize; ++i)
         {
                 while (numList[i] >= 1 && numList[i] <= numSize && numList[i] != numList[numList[i] - 1])
-                {
+                {//目的是将值放到与i值相差1的位置上
                         int tmp = numList[i];
                         numList[i] = numList[tmp - 1];
                         numList[tmp - 1] = tmp;

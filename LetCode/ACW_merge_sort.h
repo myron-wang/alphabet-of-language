@@ -5,6 +5,8 @@
 #include <string>
 #include <algorithm>
 using namespace std;
+
+/* 可以用归并排序解决两个排序数组中位数问题 */
 const int N = 100010;
 int q[N], tmp[N];
 void MergeSort(int q[], int l, int r)

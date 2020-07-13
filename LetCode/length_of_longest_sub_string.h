@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string>
 #include <unordered_set>
+#include <unordered_map>
+#include <algorithm>
 using namespace std;
 
 /*
@@ -37,6 +39,27 @@ public:
                         max_len_sub_str = MaxLength(max_len_sub_str, idx_right - i + 1);
                 }
                 return max_len_sub_str;
+        }
+        int GetLengthOfLongestSubString2(string str)
+        {
+                unordered_map<char, int> windows;
+                int left = 0;
+                int right = 0;
+                int res = 0;
+                while (right < str.size())
+                {
+                        char c = str[right];
+                        right++;
+                        windows[c]++;
+                        while (windows[c] > 1)
+                        {
+                                char d = str[left];
+                                left++;
+                                windows[d]--;
+                        }
+                        res = max(res, right - left);
+                }
+                return res;
         }
 };
 

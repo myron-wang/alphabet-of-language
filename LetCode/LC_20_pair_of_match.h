@@ -7,6 +7,10 @@
 #include <string>
 using namespace std;
 
+/*
+判断是否是匹配的大中小括号
+*/
+
 class Solution
 {
 public:
