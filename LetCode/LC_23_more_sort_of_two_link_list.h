@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <queue>
+
 using namespace std;
 /*
 分治法：一般用二分的思想去处理问题，顺序合并K个链表
@@ -56,6 +58,43 @@ public:
         ListNode* MergeLists(vector<ListNode*> &lists)
         {
                 return Merge(lists, 0, lists.size());
+        }
+};
+struct Status
+{
+        int val;
+        ListNode* ptr;
+        bool operator < (const Status &rhs)const
+        {
+                return val > rhs.val;
+        }
+};
+class Solution1
+{
+public:
+        priority_queue <Status> q;
+        ListNode* MergeKList(vector<ListNode*>& lists)
+        {
+                for (auto node : lists)
+                {
+                        if (node)
+                        {
+                                q.push({ node->val, node });
+                        }
+                }
+                ListNode head, *tail = &head;
+                while (!q.empty())
+                {
+                        auto f = q.top();
+                        q.pop();
+                        tail->next = f.ptr;
+                        tail = tail->next;
+                        if (f.ptr->next)
+                        {
+                                q.push({ f.ptr->next->val, f.ptr->next });
+                        }
+                }
+                return head.next;
         }
 };
 
