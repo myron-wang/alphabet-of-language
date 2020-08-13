@@ -13,6 +13,7 @@ using namespace std;
 
 /*
 动态规划解决最短路径和问题
+dp[i][j] += min(dp[i-1][j], dp[i][j-1])  + 特判边界条件
 */
 
 class Solution

@@ -3,7 +3,7 @@
 void test1(void)
 {
         LongestSubStr str;
-        string long_str = "abcdbcfda";
+        string long_str = "abcdbcfdd";
         int length_substr = str.GetLengthOfLongestSubString2(long_str);
         printf("最长子序列长度：%d\n", length_substr);
         system("pause");

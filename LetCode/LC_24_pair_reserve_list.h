@@ -3,6 +3,11 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
+
+/*
+链表成对取反，用递归的方法实现
+*/
+
 struct ListNode
 {
         int val;

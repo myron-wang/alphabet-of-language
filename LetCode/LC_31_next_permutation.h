@@ -3,6 +3,10 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
+/*
+找到数组中大于目数值的第一个数，如果没有，则输出最小数
+*/
 class Solution
 {
 public:

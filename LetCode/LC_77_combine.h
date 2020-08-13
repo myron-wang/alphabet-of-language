@@ -40,10 +40,43 @@ public:
         }
 };
 
+class Solution1
+{
+public:
+        vector<vector<int>> res;
+        void backtrace(vector<int>& trace, int n, int start, int k)
+        {
+                if (trace.size() == k)
+                {
+                        res.push_back(trace);
+                        return;
+                }
+                for (int i = start; i <= n; ++i)
+                {
+                        trace.push_back(i);
+                        backtrace(trace, n, i + 1, k);
+                        trace.pop_back();
+                }
+
+        }
+        vector<vector<int>> combine(int n, int k)
+        {
+                if (n <= 0 || k <= 0)
+                {
+                        return res;
+                }
+                vector<int> trace;
+                backtrace(trace, n, 1, k);
+                return res;
+        }
+};
+
+
 void test77(void)
 {
         Solution sol;
-        vector<vector<int>> res = sol.Combine(4, 2);
+        Solution1 sol1;
+        vector<vector<int>> res = sol1.combine(4, 2);
         for (int i = 0; i < res.size(); ++i) {
                 printf("ตฺ(%d)ื้:\n", i + 1);
                 for (int j = 0; j < res[0].size(); ++j) {

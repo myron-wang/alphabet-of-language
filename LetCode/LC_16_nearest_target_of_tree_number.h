@@ -4,6 +4,9 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+/*
+双指针算法，两边向中间逼近
+*/
 class Solution
 {
 public:

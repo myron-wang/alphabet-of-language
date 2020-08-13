@@ -6,7 +6,7 @@
 #include <vector>
 using namespace std;
 /*
-采用回溯法递归调用生成想要的括号对
+采用回溯法递归调用生成想要的括号对，即深搜
 */
 
 class Solution

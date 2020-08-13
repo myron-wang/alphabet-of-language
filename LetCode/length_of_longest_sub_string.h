@@ -9,7 +9,7 @@
 using namespace std;
 
 /*
-获取字符串不重复字符的最长子序列的长度
+获取字符串不重复字符的最长子串的长度
 */
 
 class LongestSubStr
@@ -41,7 +41,7 @@ public:
                 return max_len_sub_str;
         }
         int GetLengthOfLongestSubString2(string str)
-        {
+        {//abcdbcf
                 unordered_map<char, int> windows;
                 int left = 0;
                 int right = 0;

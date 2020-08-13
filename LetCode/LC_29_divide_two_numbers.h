@@ -3,6 +3,10 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
+
+/*
+只用加减做除法
+*/
 class Solution
 {
 public:

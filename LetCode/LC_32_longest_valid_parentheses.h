@@ -3,6 +3,10 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
+/*
+获取最长的有效括号对
+*/
 class Solution
 {
 public:

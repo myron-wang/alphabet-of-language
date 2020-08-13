@@ -38,7 +38,7 @@ public:
 void test89(void)
 {
         Solution sol;
-        vector<int> result = sol.GrayCode(0);
+        vector<int> result = sol.GrayCode(3);
         for (int i = 0; i < result.size(); ++i)
         {
                 printf("%d\t", result[i]);

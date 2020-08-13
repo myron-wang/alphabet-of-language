@@ -65,14 +65,14 @@ struct Status
         int val;
         ListNode* ptr;
         bool operator < (const Status &rhs)const
-        {
+        {//这样写是为了将优先堆的大顶堆改为小顶堆
                 return val > rhs.val;
         }
 };
 class Solution1
 {
 public:
-        priority_queue <Status> q;
+        priority_queue <Status> q; //默认大顶堆
         ListNode* MergeKList(vector<ListNode*>& lists)
         {
                 for (auto node : lists)

@@ -14,10 +14,10 @@ using namespace std;
 class Solution
 {
 public:
+        vector<vector<int>> ans;
         vector<vector<int>> Insert(vector <vector<int>>& intervals, vector<int>& newIntervals)
         {
-                vector<vector<int>> ans;
-                bool flag = false;
+                bool flag = false;//用于记录new区间是否已经加入ans
                 sort(intervals.begin(), intervals.end());
                 for (int i = 0; i < intervals.size(); ++i)
                 {

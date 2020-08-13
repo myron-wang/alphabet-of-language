@@ -21,7 +21,7 @@ public:
                 for (int i = start; i < nums.size(); ++i)
                 {
                         if (i > start && nums[i] == nums[i - 1])
-                        {
+                        {//先排序，然后剔除同一个循环下的重复项
                                 continue;
                         }
                         temp.emplace_back(nums[i]);
