@@ -7,6 +7,10 @@
 #include <unordered_set>
 using namespace std;
 
+/*
+给定一个排序数组求其最长连续数列
+*/
+
 class Solution
 {
 public:

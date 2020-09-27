@@ -6,6 +6,10 @@
 #include <algorithm>
 using namespace std;
 
+/*
+股票交易问题，只交易一次，先买后卖
+*/
+
 class Solution
 {
 public:

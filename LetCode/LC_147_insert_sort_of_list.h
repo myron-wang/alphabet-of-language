@@ -15,12 +15,17 @@ struct ListNode
         {
         }
 };
+
+/*
+对链表进行插入排序
+*/
+
 class Solution
 {
 public:
         ListNode* InsertionSortList(ListNode* head)
         {
-                ListNode* dummy = new ListNode(INT_MAX);
+                ListNode* dummy = new ListNode(-INT_MAX);
                 dummy->next = head;
                 ListNode* preNode = dummy;
                 while (head)

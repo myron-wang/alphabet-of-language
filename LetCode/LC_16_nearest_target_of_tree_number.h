@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 /*
-双指针算法，两边向中间逼近
+双指针算法，两边向中间逼近，返回最接近的best值
 */
 class Solution
 {

@@ -16,6 +16,10 @@ struct ListNode
         }
 };
 
+/*
+判断链表是否有环，1、利用哈希表 2、利用快慢指针法
+*/
+
 class Solution
 {
 public:

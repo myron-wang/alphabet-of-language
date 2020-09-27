@@ -16,6 +16,10 @@ struct TreeNode
         }
 };
 
+/*
+根据前序和中序结果去构建二叉树
+*/
+
 class Solution
 {
 private:

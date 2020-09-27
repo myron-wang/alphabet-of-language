@@ -15,6 +15,11 @@ struct ListNode
         }
 };
 
+/*
+在O(nlogn)的时间复杂度下对链表进行排序，此函数可以用归并排序的递归版去处理
+此处使用的是归并排序的循环版
+*/
+
 class Solution
 {
 public:

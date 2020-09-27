@@ -63,7 +63,7 @@ public:
         {//应该检查str是否是NULL和str中含有非数字的字符
                 vector<string> res;
                 vector<string> path;
-                if (str.size() == 0 || str.size() < 4)
+                if (str.size() < 4)
                 {
                         return res;
                 }

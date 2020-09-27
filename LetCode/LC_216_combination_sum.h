@@ -3,6 +3,12 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
+/*
+在组合问题的基础上，添加k个数的和n限制条件
+求解只是多了几个判断条件，其余跟组合问题一致
+*/
+
 class Solution
 {
 public:

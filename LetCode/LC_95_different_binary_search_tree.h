@@ -65,7 +65,7 @@ class BinaryTree
 {
 public:
         vector<int> PreorderTraversal(TreeNode* root)
-        {
+        {//root、left、right
                 stack<TreeNode*> s;
                 vector<int> v;
                 TreeNode* rt = root;
@@ -83,7 +83,7 @@ public:
                 return v;
         }
         vector<int> PosorderTraversal(TreeNode* root)
-        {
+        {//left、right、root
                 stack<TreeNode*> s;
                 vector<int> v;
                 TreeNode* rt = root;
@@ -102,7 +102,7 @@ public:
                 return v;
         }
         vector<int> InorderTraversal(TreeNode* root)
-        {
+        {//left、root、right
                 stack<TreeNode*> s;
                 vector<int> v;
                 TreeNode* rt = root;

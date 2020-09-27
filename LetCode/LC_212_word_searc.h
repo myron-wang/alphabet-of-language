@@ -35,7 +35,7 @@ public:
                         {
 
                                 int idx = word[i] - 'a';
-                                if (cur->nodes[idx] == 0)
+                                if (cur->nodes[idx] == 0)//==0是指下一个节点不存在的目的
                                 {
                                         cur->nodes[idx] = new TrieNode();
                                 }

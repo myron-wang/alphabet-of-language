@@ -8,6 +8,10 @@
 #include <string>
 using namespace std;
 
+/*
+找出乘积最大的连续子数组子数组
+*/
+
 class Solution
 {
 public:

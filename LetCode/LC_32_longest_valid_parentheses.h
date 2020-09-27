@@ -5,7 +5,7 @@
 using namespace std;
 
 /*
-获取最长的有效括号对
+获取最长的有效括号对，利用dp求解
 */
 class Solution
 {

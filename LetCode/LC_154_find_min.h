@@ -5,6 +5,10 @@
 #include <algorithm>
 using namespace std;
 
+/*
+查找旋转数组最小值
+*/
+
 class Solution
 {
 public:
@@ -35,7 +39,7 @@ public:
                 return nums[l];
         }
         int FindMin2(vector<int>& nums)
-        {
+        {//解决是否有元素相等的情况
                 if (nums.size() == 0)
                 {
                         return -1;

@@ -17,6 +17,10 @@ struct TreeNode
         }
 };
 
+/*
+利用排好序的数组构建二叉搜索树
+*/
+
 class Solution
 {
 public:

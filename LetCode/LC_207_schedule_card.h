@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 /*
-拓扑排序判断有无环
+拓扑排序判断有无环，待细看
 */
 class Solution
 {

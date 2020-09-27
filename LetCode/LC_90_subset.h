@@ -52,7 +52,7 @@ int SumOfBitOperation(int numA, int numB)
                 numA = sum;
                 numB = carry;
         } while (numB > 0);
-        return sum;
+        return sum; // return numA;
 }
 
 void test90(void)

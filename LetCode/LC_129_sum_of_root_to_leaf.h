@@ -15,6 +15,10 @@ struct TreeNode
         }
 };
 
+/*
+计算所有从根节点到叶节点所有路径组成的数字之和
+*/
+
 class Solution
 {
 public:

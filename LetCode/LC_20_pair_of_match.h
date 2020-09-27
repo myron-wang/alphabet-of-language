@@ -8,7 +8,7 @@
 using namespace std;
 
 /*
-判断是否是匹配的大中小括号
+判断是否是匹配的大中小括号，用堆栈去处理该问题
 */
 
 class Solution

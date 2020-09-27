@@ -8,7 +8,7 @@
 
 using namespace std;
 /*
-分治法：一般用二分的思想去处理问题，顺序合并K个链表
+分治法：一般用二分的思想去处理问题，顺序合并K个链表，其实是归并排序的思想
 */
 
 class ListNode
@@ -69,6 +69,11 @@ struct Status
                 return val > rhs.val;
         }
 };
+
+/*
+此方法是利用小顶堆去比较单个链表头，不停地出堆和入堆
+*/
+
 class Solution1
 {
 public:

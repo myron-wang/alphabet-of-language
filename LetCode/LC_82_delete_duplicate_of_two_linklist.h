@@ -7,7 +7,7 @@
 using namespace std;
 
 /*
-删除链表中相同节点
+删除链表中相同节点，即只要有相同的把所有相同的全删掉
 */
 
 class ListNode

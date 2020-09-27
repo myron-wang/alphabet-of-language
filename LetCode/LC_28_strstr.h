@@ -5,7 +5,7 @@
 #include <algorithm>
 using namespace std;
 /*
-KMP匹配字符串
+KMP匹配字符串，如果匹配返回匹配处的位置，不匹配返回-1
 */
 class Solution
 {
